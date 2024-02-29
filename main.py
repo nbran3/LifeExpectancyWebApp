@@ -9,10 +9,10 @@ def df_function():
     global data
     data = get_data()
 
-df_function()
-
 if __name__ == '__main__':
     df_function()
+
+df_function()
 
 data = pd.DataFrame(data)
 data['Value'] = data['Value'].round().astype(int)
