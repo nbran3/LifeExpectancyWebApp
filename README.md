@@ -1,3 +1,3 @@
-https://nbran3.github.io/LifeExpectancyWebApp/
+GitHub Pages version with flask backend https://nbran3.github.io/LifeExpectancyWebApp/
 
-Currently working on implementing a React-based Slider to update the map
+Streamlit version with just a csv upload - https://stmainpy-hrkfvhdtzzm8y37bmdbdfz.streamlit.app/
