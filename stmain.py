@@ -10,7 +10,7 @@ st.set_page_config(layout="wide", page_title="World Life Expectancy Map")
 # Load and process data
 @st.cache_data
 def load_and_process_data():
-    data = pd.read_csv(r"C:\Users\nbwan\Documents\GitHub\LifeExpectancyWebApp\lifeExp.csv")
+    data = pd.read_csv(r"lifeExp.csv")
     data['Value'] = data['Value'].round().astype(int)
     median_value = data['Value'].median()
     data = data[['SpatialCode', 'Value']]
@@ -21,7 +21,7 @@ data, median_value = load_and_process_data()
 # Load GeoJSON data
 @st.cache_data
 def load_geojson():
-    with open(r"C:\Users\nbwan\Documents\GitHub\LifeExpectancyWebApp\countries.geojson", 'r') as geojson_file:
+    with open(r"countries.geojson", 'r') as geojson_file:
         return json.load(geojson_file)
 
 geojson_data = load_geojson()
