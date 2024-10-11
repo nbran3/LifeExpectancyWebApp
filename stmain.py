@@ -4,6 +4,14 @@ from streamlit_folium import folium_static
 import pandas as pd
 import folium
 
+try:
+    from streamlit_folium import folium_static
+    HAS_STREAMLIT_FOLIUM = True
+except ImportError:
+    HAS_STREAMLIT_FOLIUM = False
+    st.error("streamlit_folium is not installed. The map will be saved as an HTML file instead of being displayed directly.")
+
+
 # Set page config
 st.set_page_config(layout="wide", page_title="World Life Expectancy Map")
 
